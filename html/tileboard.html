@@ -1,0 +1,5 @@
+<div ng-repeat="row in tileMap" class="col-xs-12">
+
+    <tile ng-repeat="col in row.cols" name="r{{row.rowNum}}c{{col.tileNum}}" row="{{row.rowNum}}" col={{col.tileNum}} class_name="tile {{col.color}}" color="{{col.color}}"></tile>
+
+</div>

@@ -23,16 +23,16 @@ myApp.controller('gameContrl', function ($scope, $http) {
 
 
     $scope.onPlay = function () {
-        
+
         window.location = "#/play";
     }
-    
+
     $scope.onStat = function () {
-        
+
         window.location = "#/stat";
     }
-    
-    $scope.onLearn = function(){
+
+    $scope.onLearn = function () {
         window.location = "#/learn";
     }
 
@@ -40,7 +40,11 @@ myApp.controller('gameContrl', function ($scope, $http) {
 
 //learnContrl
 myApp.controller('learnContrl', function ($scope, $http) {
-    
+
+    $scope.msg = "Welcome to RGB Tutorial"
+
+
+
 });
 
 myApp.controller('playContrl', function ($scope, $http) {
@@ -50,7 +54,7 @@ myApp.controller('playContrl', function ($scope, $http) {
     $scope.game.score = 0;
     $scope.game.msg1 = "Press on a Tile";
     $scope.game.msg2 = "Three tiles Adds Up!!";
-    
+
     $scope.onTileClick = function (name, color, row, col) {
 
         for (var r = 1; r <= $scope.tileMap.length; r++) {
@@ -105,21 +109,21 @@ myApp.controller('playContrl', function ($scope, $http) {
             }
 
             if ($scope.scoreCount >= 100) {
-                
+
                 $scope.scoreCount = 100;
-                
-                
-                
-                if($scope.game.score > $scope.game.highscore){
+
+
+
+                if ($scope.game.score > $scope.game.highscore) {
                     saveHighScore($scope.game.score);
                     $scope.game.highscore = $scope.game.score;
                     $scope.game.msg1 = "Fantastic!";
-                    $scope.game.msg2 = "A New Record "+$scope.game.score;
-                }else{
+                    $scope.game.msg2 = "A New Record " + $scope.game.score;
+                } else {
                     $scope.game.msg1 = "WoW! Filled Up!";
-                    $scope.game.msg2 = "Your Score is "+$scope.game.score;    
+                    $scope.game.msg2 = "Your Score is " + $scope.game.score;
                 }
-                
+
                 colorValueMap = genColValMap(colorValueMap);
                 $scope.scoreCount = 50;
                 $scope.tileMap = genTiers();
@@ -127,14 +131,14 @@ myApp.controller('playContrl', function ($scope, $http) {
                 //                alert("You Lost!");
                 $scope.scoreCount = 0;
                 $scope.game.msg1 = "Game Over";
-                $scope.game.msg2 = "Your score is "+$scope.game.score;
-               
+                $scope.game.msg2 = "Your score is " + $scope.game.score;
+
                 //freeze all the tiles
                 $scope.tileMap = [];
-                
+
                 window.location = "#/";
-                
-                
+
+
             }
 
             $scope.tileMap = genTiers();
@@ -173,14 +177,14 @@ function genColValMap(map) {
         "pink": getRandomInt(-6, -1),
         "grey": getRandomInt(-6, -1)
     };
-    
-    var posSet = _.sample(colorList,4);
-    
+
+    var posSet = _.sample(colorList, 4);
+
     map[posSet[0]] = getRandomInt(1, 5);
     map[posSet[1]] = getRandomInt(1, 5);
     map[posSet[2]] = getRandomInt(1, 5);
     map[posSet[3]] = getRandomInt(1, 5);
-    
+
 
     return map;
 }
@@ -194,7 +198,7 @@ function calcDiff(dots) {
     var v2 = colorValueMap[c2.color];
     var v3 = colorValueMap[c3.color];
 
-    
+
     return (v1 + v2 + v3);
 }
 
@@ -239,17 +243,17 @@ function genTiers() {
 
 
 function saveHighScore(score) {
-    
-    window.localStorage.setItem("highscore",score);
+
+    window.localStorage.setItem("highscore", score);
 }
 
 function getHighScore() {
-    
+
     var hs = window.localStorage.getItem("highscore");
-    if(hs == 'undefined' || hs == null){
+    if (hs == 'undefined' || hs == null) {
         hs = 0;
     }
-    
+
     return hs;
 
 }
