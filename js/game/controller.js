@@ -21,7 +21,7 @@ myApp.controller('cntrl', function ($scope, $http) {
 
 myApp.controller('gameContrl', function ($scope, $http) {
 
-//    console.log("FEED");
+
     $scope.onPlay = function () {
         
         window.location = "#/play";
@@ -30,7 +30,6 @@ myApp.controller('gameContrl', function ($scope, $http) {
     $scope.onStat = function () {
         
         window.location = "#/stat";
-//        console.log("STAT");
     }
 
 });
@@ -39,7 +38,6 @@ myApp.controller('playContrl', function ($scope, $http) {
 
     $scope.game = {};
     $scope.game.highscore = getHighScore();
-//    console.log($scope.highscore);
     $scope.game.score = 0;
     $scope.game.msg1 = "Press on a Tile";
     $scope.game.msg2 = "Three tiles Adds Up!!";
