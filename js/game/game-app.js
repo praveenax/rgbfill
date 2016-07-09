@@ -20,6 +20,9 @@ myApp.config(function ($routeProvider, $sceDelegateProvider) {
         }).when('/stat', {
             templateUrl: 'html/stats.html',
             controller: 'playContrl'
+        }).when('/learn', {
+            templateUrl: 'html/learn.html',
+            controller: 'learnContrl'
         });
 
 

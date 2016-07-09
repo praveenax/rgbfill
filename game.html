@@ -1,36 +1,13 @@
 <div>
     <style>
-        #playBtn {
-            border: 8px solid white;
-            background: #16a085;
-            font-size: 25px;
-            margin-bottom: 20px;
-            margin-top: 20px;
-            /*            font-family: 'Courgette', cursive;*/
-            /*            font-family: 'Open Sans', sans-serif;*/
-            /*            font-family: 'Pacifico', cursive;*/
-            padding: 12px;
-            font-family: 'Bungee', cursive;
-        }
         
-        #highBtn {
-            border: 8px solid white;
-            background: #2980b9;
-            font-size: 25px;
-            margin-bottom: 20px;
-            margin-top: 20px;
-            /*            font-family: 'Courgette', cursive;*/
-            /*            font-family: 'Open Sans', sans-serif;*/
-            /*            font-family: 'Pacifico', cursive;*/
-            padding: 12px;
-            font-family: 'Bungee', cursive;
-        }
     </style>
     <h2 style="font-family: 'Bungee Shade', cursive;text-align:center;font-size:50px;">
     rgb fill
     </h2>
 
     <div class="col-xs-12">
+        <button id="learnBtn" class="col-xs-6 col-xs-offset-3" ng-click="onLearn()">Learn</button>
         <button id="playBtn" class="col-xs-6 col-xs-offset-3" ng-click="onPlay()">Play</button>
         <button id="highBtn" class="col-xs-6 col-xs-offset-3" ng-click="onStat()">Stats</button>
     </div>

@@ -31,7 +31,16 @@ myApp.controller('gameContrl', function ($scope, $http) {
         
         window.location = "#/stat";
     }
+    
+    $scope.onLearn = function(){
+        window.location = "#/learn";
+    }
 
+});
+
+//learnContrl
+myApp.controller('learnContrl', function ($scope, $http) {
+    
 });
 
 myApp.controller('playContrl', function ($scope, $http) {
