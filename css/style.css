@@ -9,23 +9,24 @@ body {
 }
 
 @font-face {
-  font-family: 'Bungee';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Bungee'), local('Bungee-Regular'), url(yTWLtzpDqG8wqsk2Of1ReOvvDin1pK8aKteLpeZ5c0A.woff) format('woff');
-}
-@font-face {
-  font-family: 'Bungee Shade';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Bungee Shade'), local('BungeeShade-Regular'), url(HSW7pxPYXBWkq7OSnuXoeKRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+    font-family: 'Bungee';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Bungee'), local('Bungee-Regular'), url(yTWLtzpDqG8wqsk2Of1ReOvvDin1pK8aKteLpeZ5c0A.woff) format('woff');
 }
 
-#instruction{
-    font-size:20px;
-    text-align:center;
+@font-face {
+    font-family: 'Bungee Shade';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Bungee Shade'), local('BungeeShade-Regular'), url(HSW7pxPYXBWkq7OSnuXoeKRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+}
+
+#instruction {
+    font-size: 20px;
+    text-align: center;
     font-family: 'Bungee', cursive;
-    color:white;
+    color: white;
     position: absolute;
     bottom: 30px;
     display: block;
@@ -33,11 +34,11 @@ body {
     width: 100%;
 }
 
-#instruction2{
-    font-size:20px;
-    text-align:center;
+#instruction2 {
+    font-size: 20px;
+    text-align: center;
     font-family: 'Bungee', cursive;
-    color:white;
+    color: white;
     position: absolute;
     bottom: 60px;
     display: block;
@@ -79,7 +80,6 @@ border: 8px solid white;
     margin-right: 4px;
     padding: 4px;
     font-size: 20px;
-    
 }
 
 .showArrow {
@@ -87,12 +87,18 @@ border: 8px solid white;
 }
 
 .noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none;   /* Chrome/Safari/Opera */
-  -khtml-user-select: none;    /* Konqueror */
-  -moz-user-select: none;      /* Firefox */
-  -ms-user-select: none;       /* Internet Explorer/Edge */
-  user-select: none;           /* Non-prefixed version, currently
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Chrome/Safari/Opera */
+    -khtml-user-select: none;
+    /* Konqueror */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
                                   not supported by any browser */
 }
 
@@ -105,7 +111,7 @@ border: 8px solid white;
     border-radius: 50px;
 }
 
-.endBtn{
+.endBtn {
     font-size: 30px;
     width: 18%;
     background: #ecf0f1;
@@ -165,7 +171,7 @@ border: 8px solid white;
     display: block;
     margin: auto;
     margin-bottom: 30px;
-        border: 8px solid white;
+    border: 8px solid white;
     border-radius: 20px;
 }
 
@@ -175,14 +181,44 @@ border: 8px solid white;
 
 @keyframes blink-animation {
     to {
-/*            visibility: hidden;*/
+        /*            visibility: hidden;*/
         opacity: 0.5;
     }
 }
 
 @-webkit-keyframes blink-animation {
     to {
-/*            visibility: hidden;*/
+        /*            visibility: hidden;*/
         opacity: 0.5;
     }
+}
+
+#playBtn {
+    border: 8px solid white;
+    background: #16a085;
+    font-size: 25px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 12px;
+    font-family: 'Bungee', cursive;
+}
+
+#learnBtn {
+    border: 8px solid white;
+    background: #e74c3c;
+    font-size: 25px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 12px;
+    font-family: 'Bungee', cursive;
+}
+
+#highBtn {
+    border: 8px solid white;
+    background: #2980b9;
+    font-size: 25px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 12px;
+    font-family: 'Bungee', cursive;
 }
